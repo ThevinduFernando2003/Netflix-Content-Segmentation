@@ -1,0 +1,113 @@
+random_seed: 42
+
+paths:
+  raw_csv: data/raw/netflix_titles.csv
+  models_dir: models
+  reports_dir: reports
+  figures_dir: reports/figures
+
+cleaning:
+  missing_tokens: ["not given", "unknown", "n/a", "na", "none", "null"]
+  # The public Netflix dump uses "September 25, 2021". This extract uses M/D/YYYY
+  # and Excel datetimes, so those formats are tried as well. See docs/DECISIONS.md.
+  date_formats: ["%B %d, %Y", "%b %d, %Y", "%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y"]
+
+duration:
+  strategy: normalised_percentile
+
+features:
+  text_fields: ["title", "description"]
+  tfidf:
+    ngram_range: [1, 2]
+    min_df: 5
+    max_features: 20000
+    sublinear_tf: true
+    stop_words: english
+    strip_accents: unicode
+  svd_components: 150
+  categorical_min_frequency: 20
+  numeric_columns:
+    - release_year
+    - year_added
+    - years_to_platform
+    - n_genres
+    - n_cast
+    - n_countries
+    - n_directors
+    - duration_normalised
+    - director_missing
+    - country_missing
+    - cast_missing
+
+block_weights:
+  text: 1.0
+  genre: 1.0
+  categorical: 0.5
+  numeric: 0.5
+
+weight_sensitivity:
+  - {text: 1.0, genre: 1.0, categorical: 0.5, numeric: 0.5}
+  - {text: 0.5, genre: 1.5, categorical: 0.5, numeric: 0.5}
+  - {text: 2.0, genre: 1.0, categorical: 0.25, numeric: 0.25}
+
+representations:
+  r1:
+    name: "Genre + numeric + categorical (no free text)"
+    blocks: [genre, categorical, numeric]
+  r2:
+    name: "SVD(title, 150) + genre + weighted numeric + categorical"
+    blocks: [text, genre, categorical, numeric]
+  r3:
+    name: "Title text only, SVD-reduced, spherical"
+    blocks: [text]
+
+# Filled by scripts/select_k.py after the validation sweep, then reviewed.
+product:
+  representation: r1
+  k: 6
+  algorithm: spherical_kmeans
+  k_reason: "Chosen k=6 as the finest k in 5..10 whose mean bootstrap ARI is at least 0.80. Bootstrap ARI is 0.8203 ± 0.1211. Stability outranks a flattering silhouette. k below 5 is excluded from the ceiling because that ARI near 1.0 is a coarse partition (k=2 recovers type, ARI 0.995). The inertia knee at k=9, max silhouette at k=2, and Davies-Bouldin at k=19 disagreed. See reports/k_selection.md."
+
+k_selection:
+  k_min: 2
+  k_max: 20
+  n_bootstrap: 20
+  bootstrap_fraction: 0.8
+  seed_sweep: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  gap_references: 5
+  comparison_bootstrap: 20
+  sensitivity_bootstrap: 10
+  n_jobs: 4
+  # Coarse k (usually the type split) must not set the ARI ceiling.
+  interpretable_min: 5
+  interpretable_max: 10
+  stability_floor: 0.80
+
+dbscan:
+  min_samples: 15
+
+gmm:
+  covariance_type: diag
+  n_init: 1
+  reg_covar: 1.0e-6
+
+gower:
+  subsample: 3000
+  block_size: 400
+
+projection:
+  tsne_perplexity: 30
+  tsne_max_iter: 750
+  umap_n_neighbors: 15
+  umap_min_dist: 0.1
+
+cluster_name_overrides:
+  0: "US Family and Action Films"
+  1: "International Drama Films"
+  2: "International TV Series"
+  3: "US Independent Dramas"
+  4: "US Kids and Docuseries"
+  5: "US Docs and Stand-Up"
+
+api:
+  rate_limit_per_minute: 120
