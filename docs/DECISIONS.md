@@ -1,0 +1,25 @@
+# Decisions
+
+One line of reasoning each. Numbers in the reports come from the scripts, not from this file.
+
+1. **Duration.** Use a within-type percentile (`duration_normalised`) instead of median-imputing both minutes and seasons. Imputing both would give every movie the median season count and every series the median runtime, and k-means would split on that artefact. The alternative, separate models per `type`, was rejected because the product is one catalogue segmentation and `type` is an observed attribute.
+2. **Missing text.** `cast` and `description` are absent from the extract, so they are empty strings, never the token `Unknown`. A literal unknown token becomes a dimension and glues incomplete rows into a fake segment.
+3. **Missing director and country.** The file stores these as `not given` (2,588 directors, 287 countries). They are treated as missing, rows are kept, and `director_missing` / `country_missing` are explicit indicators. Listwise deletion would drop about a third of the catalogue.
+4. **Title text.** With no synopsis, TF-IDF is fit on the title only. The representation comparison has to show that this block improves stability before it is allowed into the product model.
+5. **Categorical token.** `__MISSING__` is an explicit one-hot level for type / country / rating. That is not the same failure mode as filling free text with `Unknown`: it is one low-dimensional level, down-weighted with the rest of the categorical block.
+6. **Real titles are not missing tokens.** A title is not blanked because it happens to be the word "unknown". Missing-token stripping applies to director, cast, country, rating, duration, and listed_in.
+7. **Dates.** The brief's `%B %d, %Y` format is tried first. This file also contains `M/D/YYYY`, so those formats are in the explicit list. Nothing is inferred by pandas' date parser.
+8. **Block scale.** Each block is scaled so its total variance is 1, then multiplied by `sqrt(weight)`. A test locks the variance ratio. Rows are L2-normalised only after that, which is spherical k-means: Euclidean distance then tracks cosine.
+9. **SVD, not PCA, on text.** `TruncatedSVD` keeps the TF-IDF matrix sparse until it is already reduced. PCA would densify it.
+10. **One-hot geometry.** Distinct countries are equidistant. The categorical weight stays at 0.5. Gower (float32, blocked, 3,000-row subsample) and KPrototypes (2,000-row subsample) are comparisons, not the serving model, because a full float64 Gower matrix is about 0.6 GB and neither assigns new titles through the same pipeline cheaply.
+11. **Product clusterer.** Spherical k-means, `n_init=10`, `init="k-means++"`, Lloyd, one thread. A diagonal Gaussian mixture is fit on the same matrix for membership probabilities. Full covariance is ill-conditioned at this width.
+12. **k.** Bootstrap ARI (20 resamples, 80% without replacement, whole pipeline refit) decides k. The ceiling is the finest k in 5..10 whose mean ARI is at least 0.80, not the maximum ARI on the sweep. k=2..4 recover `type` with ARI near 1 and would otherwise veto every content segmentation. The elbow is recorded with `KneeLocator` and is allowed to disagree.
+13. **DBSCAN instead of HDBSCAN.** HDBSCAN needs a compiled extension and pulls a heavy stack into the image. DBSCAN is the density-based result, and its noise fraction is reported even when it is large.
+14. **UMAP only at train time.** Coordinates are written to `models/projection_2d.parquet`. The runtime image does not install `umap-learn`, because the UI never recomputes the projection.
+15. **Projections are not the feature space.** t-SNE and UMAP do not preserve global distance or cluster size. Clustering happens before the projection. The UI states that on the map.
+16. **External validation is a second fit.** `type`, `rating`, and the primary genre are withheld together. Secondary genres remain for R1/R2, so primary-genre agreement is partly co-occurrence and is described that way.
+17. **Names.** A cluster is named from genres with lift at least 1.8 and cluster rate at least 0.25. Otherwise it stays "Uninterpretable mix". Overrides in `config.yaml` replace the heuristic after the profiles are read.
+18. **Determinism.** `RANDOM_SEED = 42`, `OMP_NUM_THREADS=1`, and `threadpoolctl` limits of 1. Two seeded fits must match label arrays exactly.
+19. **Persisted object.** One `SegmentationModel` holds the engineer, the weighted representation, k-means, the mixture, distance thresholds, and the training index. `/assign` only calls `transform` and `predict`.
+20. **Outliers.** K-means always returns a cluster. `is_outlier` is true when the distance exceeds the 95th percentile of training members of that cluster.
+21. **Constant description length.** This extract has no synopsis, so `description_word_count` is 0 on every training row. Keeping it would make every `/assign` call with a real description an outlier on a column the catalogue never varies. It is not a clustering feature. The column is still computed in cleaning and shown in profiles as evidence that it carries no information.

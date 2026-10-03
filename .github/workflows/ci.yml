@@ -1,0 +1,44 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: python -m pip install -r requirements-dev.txt
+      - name: Ruff
+        run: ruff check src tests scripts app
+      - name: Black
+        run: black --check src tests scripts app
+      - name: Mypy
+        run: mypy src
+      - name: Pytest
+        env:
+          PYTHONPATH: src
+          OMP_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+        run: pytest --cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage
+          path: coverage.xml
+      - name: Fixture model for the image build
+        env:
+          PYTHONPATH: src
+          OMP_NUM_THREADS: "1"
+        run: python scripts/train.py --data tests/fixtures/mini_netflix.csv --representation r1 --k 3 --ignore-decision
+      - name: Docker build
+        run: docker build -t netflix-segmentation:ci .

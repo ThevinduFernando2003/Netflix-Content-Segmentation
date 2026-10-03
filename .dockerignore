@@ -1,0 +1,14 @@
+data/raw
+notebooks
+.git
+.github
+tests
+reports
+.venv
+**/__pycache__
+**/*.pyc
+.mplconfig
+.env
+Dataset.csv.xlsx
+*.md
+!README.md
