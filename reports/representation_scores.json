@@ -1,0 +1,827 @@
+{
+  "choice": "r1",
+  "reason": "r2 has the highest bootstrap ARI (0.732) but leads R1 (0.725) by under 0.05. The catalogue has no synopsis, so the text block is titles only. R1 is the product: it is simpler, interpretable, and statistically tied on the metric that decides whether clusters exist.",
+  "shared_k": 9,
+  "results": {
+    "r1": {
+      "matrix_shape": [
+        8790,
+        107
+      ],
+      "scores": [
+        {
+          "silhouette": 0.17332153590125562,
+          "calinski_harabasz": 1664.1333325256783,
+          "davies_bouldin": 2.0831493293030903,
+          "inertia": 6100.806179911803,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 2,
+          "n_points_scored": 8790,
+          "k": 2
+        },
+        {
+          "silhouette": 0.14666530440757458,
+          "calinski_harabasz": 1373.5461109487874,
+          "davies_bouldin": 2.364618436607046,
+          "inertia": 5527.889175908438,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 3,
+          "n_points_scored": 8790,
+          "k": 3
+        },
+        {
+          "silhouette": 0.14452807524385575,
+          "calinski_harabasz": 1103.049372325612,
+          "davies_bouldin": 2.485480373503049,
+          "inertia": 5270.867859559099,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 4,
+          "n_points_scored": 8790,
+          "k": 4
+        },
+        {
+          "silhouette": 0.1310468745101344,
+          "calinski_harabasz": 971.6737857392752,
+          "davies_bouldin": 2.5928460507868047,
+          "inertia": 5030.47703296681,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 5,
+          "n_points_scored": 8790,
+          "k": 5
+        },
+        {
+          "silhouette": 0.12823954344920235,
+          "calinski_harabasz": 872.8254423973567,
+          "davies_bouldin": 2.5170819104272493,
+          "inertia": 4847.642122470339,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 6,
+          "n_points_scored": 8790,
+          "k": 6
+        },
+        {
+          "silhouette": 0.1274638866671529,
+          "calinski_harabasz": 820.4498011140398,
+          "davies_bouldin": 2.383073436975671,
+          "inertia": 4649.902213841674,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 7,
+          "n_points_scored": 8790,
+          "k": 7
+        },
+        {
+          "silhouette": 0.148105804331266,
+          "calinski_harabasz": 764.8684233152111,
+          "davies_bouldin": 2.176258342576,
+          "inertia": 4507.820259658242,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 8,
+          "n_points_scored": 8790,
+          "k": 8
+        },
+        {
+          "silhouette": 0.14508859489351758,
+          "calinski_harabasz": 742.1666007621931,
+          "davies_bouldin": 2.2431399580409916,
+          "inertia": 4328.998936285601,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 9,
+          "n_points_scored": 8790,
+          "k": 9
+        },
+        {
+          "silhouette": 0.13688340136082058,
+          "calinski_harabasz": 696.0964034887973,
+          "davies_bouldin": 2.2852691570438592,
+          "inertia": 4234.559754288204,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 10,
+          "n_points_scored": 8790,
+          "k": 10
+        },
+        {
+          "silhouette": 0.14689752970435524,
+          "calinski_harabasz": 673.9180113371335,
+          "davies_bouldin": 2.273718119921472,
+          "inertia": 4104.935916077581,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 11,
+          "n_points_scored": 8790,
+          "k": 11
+        },
+        {
+          "silhouette": 0.15633676444508893,
+          "calinski_harabasz": 643.3738495350542,
+          "davies_bouldin": 2.1704161466750986,
+          "inertia": 4017.245506248817,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 12,
+          "n_points_scored": 8790,
+          "k": 12
+        },
+        {
+          "silhouette": 0.16178222344598023,
+          "calinski_harabasz": 628.5098678176482,
+          "davies_bouldin": 2.1796909460097393,
+          "inertia": 3902.577401710827,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 13,
+          "n_points_scored": 8790,
+          "k": 13
+        },
+        {
+          "silhouette": 0.15708508040315555,
+          "calinski_harabasz": 608.2313432437057,
+          "davies_bouldin": 2.032115057326255,
+          "inertia": 3817.019611182937,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 14,
+          "n_points_scored": 8790,
+          "k": 14
+        },
+        {
+          "silhouette": 0.13528710833242816,
+          "calinski_harabasz": 580.3211882392243,
+          "davies_bouldin": 2.22989077777963,
+          "inertia": 3767.6927277493787,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 15,
+          "n_points_scored": 8790,
+          "k": 15
+        },
+        {
+          "silhouette": 0.1391154562356573,
+          "calinski_harabasz": 565.4169679767613,
+          "davies_bouldin": 2.1606499293232586,
+          "inertia": 3689.5923164823134,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 16,
+          "n_points_scored": 8790,
+          "k": 16
+        },
+        {
+          "silhouette": 0.16002819162721357,
+          "calinski_harabasz": 546.5921344822955,
+          "davies_bouldin": 2.069397414648668,
+          "inertia": 3633.741036027225,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 17,
+          "n_points_scored": 8790,
+          "k": 17
+        },
+        {
+          "silhouette": 0.15148318938956165,
+          "calinski_harabasz": 537.3903927840371,
+          "davies_bouldin": 2.0368887671328917,
+          "inertia": 3554.368646158695,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 18,
+          "n_points_scored": 8790,
+          "k": 18
+        },
+        {
+          "silhouette": 0.1565718335021351,
+          "calinski_harabasz": 523.8566942567534,
+          "davies_bouldin": 2.012394420756921,
+          "inertia": 3496.7920803552133,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 19,
+          "n_points_scored": 8790,
+          "k": 19
+        },
+        {
+          "silhouette": 0.1535355730279033,
+          "calinski_harabasz": 504.32739696451375,
+          "davies_bouldin": 2.0443375660170275,
+          "inertia": 3467.473051774855,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 20,
+          "n_points_scored": 8790,
+          "k": 20
+        }
+      ],
+      "candidate_k": 9,
+      "knee": 9,
+      "stability": {
+        "k": 9,
+        "n_bootstrap": 20,
+        "n_pairs": 190,
+        "fraction": 0.8,
+        "mean_ari": 0.7247719721926238,
+        "std_ari": 0.09802681062238412
+      },
+      "external": {
+        "type": {
+          "ari": 0.17445963175726092,
+          "nmi": 0.368095402277706,
+          "n": 8790
+        },
+        "rating": {
+          "ari": 0.047511350257926695,
+          "nmi": 0.12803028327313062,
+          "n": 8790
+        },
+        "primary_genre": {
+          "ari": 0.18323816814260352,
+          "nmi": 0.35133205359684094,
+          "n": 8790
+        }
+      },
+      "seconds": 176.64556089998223,
+      "cumulative_explained_variance": null,
+      "svd_components": null,
+      "at_shared_k": {
+        "silhouette": 0.14508859489351758,
+        "calinski_harabasz": 742.1666007621931,
+        "davies_bouldin": 2.2431399580409916,
+        "inertia": 4328.998936285601,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 9,
+        "n_points_scored": 8790,
+        "k": 9
+      },
+      "at_candidate": {
+        "silhouette": 0.14508859489351758,
+        "calinski_harabasz": 742.1666007621931,
+        "davies_bouldin": 2.2431399580409916,
+        "inertia": 4328.998936285601,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 9,
+        "n_points_scored": 8790,
+        "k": 9
+      }
+    },
+    "r2": {
+      "matrix_shape": [
+        8790,
+        257
+      ],
+      "scores": [
+        {
+          "silhouette": 0.12249726191991936,
+          "calinski_harabasz": 1094.3757903755552,
+          "davies_bouldin": 2.5804165222602475,
+          "inertia": 6803.487433303117,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 2,
+          "n_points_scored": 8790,
+          "k": 2
+        },
+        {
+          "silhouette": 0.10049003807297875,
+          "calinski_harabasz": 882.6595291031337,
+          "davies_bouldin": 2.9546399745735865,
+          "inertia": 6370.824119294806,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 3,
+          "n_points_scored": 8790,
+          "k": 3
+        },
+        {
+          "silhouette": 0.09764847605947732,
+          "calinski_harabasz": 691.5549516519994,
+          "davies_bouldin": 3.199261658830979,
+          "inertia": 6189.245220043361,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 4,
+          "n_points_scored": 8790,
+          "k": 4
+        },
+        {
+          "silhouette": 0.08582313357367265,
+          "calinski_harabasz": 597.6246460689803,
+          "davies_bouldin": 3.3446392937332314,
+          "inertia": 6014.198543598982,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 5,
+          "n_points_scored": 8790,
+          "k": 5
+        },
+        {
+          "silhouette": 0.0845817656933322,
+          "calinski_harabasz": 532.2021260731437,
+          "davies_bouldin": 2.922490177098613,
+          "inertia": 5871.905125256527,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 6,
+          "n_points_scored": 8790,
+          "k": 6
+        },
+        {
+          "silhouette": 0.08014029042976359,
+          "calinski_harabasz": 495.379255956571,
+          "davies_bouldin": 3.0990584920700988,
+          "inertia": 5716.273144281339,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 7,
+          "n_points_scored": 8790,
+          "k": 7
+        },
+        {
+          "silhouette": 0.09434728388409429,
+          "calinski_harabasz": 441.5528484603831,
+          "davies_bouldin": 2.9402673873321787,
+          "inertia": 5659.012139611542,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 8,
+          "n_points_scored": 8790,
+          "k": 8
+        },
+        {
+          "silhouette": 0.0796228163542432,
+          "calinski_harabasz": 420.1984032890764,
+          "davies_bouldin": 3.1170881435148856,
+          "inertia": 5532.681226454453,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 9,
+          "n_points_scored": 8790,
+          "k": 9
+        },
+        {
+          "silhouette": 0.08662798100238799,
+          "calinski_harabasz": 399.13844732980164,
+          "davies_bouldin": 2.93550021643443,
+          "inertia": 5429.362907602176,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 10,
+          "n_points_scored": 8790,
+          "k": 10
+        },
+        {
+          "silhouette": 0.09680737297319564,
+          "calinski_harabasz": 380.70897706447573,
+          "davies_bouldin": 2.7472294397898684,
+          "inertia": 5336.50753733616,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 11,
+          "n_points_scored": 8790,
+          "k": 11
+        },
+        {
+          "silhouette": 0.09332891148410638,
+          "calinski_harabasz": 356.5229346696573,
+          "davies_bouldin": 2.834201668394302,
+          "inertia": 5288.143477781739,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 12,
+          "n_points_scored": 8790,
+          "k": 12
+        },
+        {
+          "silhouette": 0.09153868172055339,
+          "calinski_harabasz": 347.6572701066958,
+          "davies_bouldin": 2.7003778800043605,
+          "inertia": 5185.809422418454,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 13,
+          "n_points_scored": 8790,
+          "k": 13
+        },
+        {
+          "silhouette": 0.09101973203741703,
+          "calinski_harabasz": 331.6081043864217,
+          "davies_bouldin": 2.8032047104813755,
+          "inertia": 5130.533835422482,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 14,
+          "n_points_scored": 8790,
+          "k": 14
+        },
+        {
+          "silhouette": 0.09240778027810617,
+          "calinski_harabasz": 314.9530402917201,
+          "davies_bouldin": 2.8544700589770526,
+          "inertia": 5092.036988448805,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 15,
+          "n_points_scored": 8790,
+          "k": 15
+        },
+        {
+          "silhouette": 0.08313618105998805,
+          "calinski_harabasz": 299.78992115435364,
+          "davies_bouldin": 2.8547752620070925,
+          "inertia": 5058.267952433115,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 16,
+          "n_points_scored": 8790,
+          "k": 16
+        },
+        {
+          "silhouette": 0.07915750966982968,
+          "calinski_harabasz": 292.40153422738683,
+          "davies_bouldin": 2.8600561532526827,
+          "inertia": 4989.795564478813,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 17,
+          "n_points_scored": 8790,
+          "k": 17
+        },
+        {
+          "silhouette": 0.08385180514424224,
+          "calinski_harabasz": 281.7925033800085,
+          "davies_bouldin": 2.7599770642575843,
+          "inertia": 4948.375565657892,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 18,
+          "n_points_scored": 8790,
+          "k": 18
+        },
+        {
+          "silhouette": 0.08558363932115182,
+          "calinski_harabasz": 273.31383575565803,
+          "davies_bouldin": 2.853593732514855,
+          "inertia": 4901.488371299465,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 19,
+          "n_points_scored": 8790,
+          "k": 19
+        },
+        {
+          "silhouette": 0.08251189300585061,
+          "calinski_harabasz": 258.7262152325568,
+          "davies_bouldin": 2.8120508208639903,
+          "inertia": 4902.6666851200325,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 20,
+          "n_points_scored": 8790,
+          "k": 20
+        }
+      ],
+      "candidate_k": 9,
+      "knee": 9,
+      "stability": {
+        "k": 9,
+        "n_bootstrap": 20,
+        "n_pairs": 190,
+        "fraction": 0.8,
+        "mean_ari": 0.7322758276980138,
+        "std_ari": 0.09289122188653974
+      },
+      "external": {
+        "type": {
+          "ari": 0.1351394154864047,
+          "nmi": 0.30390635562412016,
+          "n": 8790
+        },
+        "rating": {
+          "ari": 0.03474060670624955,
+          "nmi": 0.12532809603480313,
+          "n": 8790
+        },
+        "primary_genre": {
+          "ari": 0.12145619119304435,
+          "nmi": 0.3096813700490255,
+          "n": 8790
+        }
+      },
+      "seconds": 309.460809700191,
+      "cumulative_explained_variance": 0.45857202948536724,
+      "svd_components": 150,
+      "explained_variance_ratio_head": [
+        0.019511224702000618,
+        0.009290017187595367,
+        0.008794976398348808,
+        0.007905942387878895,
+        0.007458158768713474,
+        0.0070708077400922775,
+        0.0068615819327533245,
+        0.006501898169517517,
+        0.006191218737512827,
+        0.006142167374491692
+      ],
+      "at_shared_k": {
+        "silhouette": 0.0796228163542432,
+        "calinski_harabasz": 420.1984032890764,
+        "davies_bouldin": 3.1170881435148856,
+        "inertia": 5532.681226454453,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 9,
+        "n_points_scored": 8790,
+        "k": 9
+      },
+      "at_candidate": {
+        "silhouette": 0.0796228163542432,
+        "calinski_harabasz": 420.1984032890764,
+        "davies_bouldin": 3.1170881435148856,
+        "inertia": 5532.681226454453,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 9,
+        "n_points_scored": 8790,
+        "k": 9
+      }
+    },
+    "r3": {
+      "matrix_shape": [
+        8790,
+        150
+      ],
+      "scores": [
+        {
+          "silhouette": 0.2505690409211462,
+          "calinski_harabasz": 220.39522683037092,
+          "davies_bouldin": 1.0985736248859543,
+          "inertia": 5056.299714290175,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 2,
+          "n_points_scored": 8790,
+          "k": 2
+        },
+        {
+          "silhouette": 0.2551518496406757,
+          "calinski_harabasz": 161.61231194354488,
+          "davies_bouldin": 1.2048651693901506,
+          "inertia": 4999.214068224091,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 3,
+          "n_points_scored": 8790,
+          "k": 3
+        },
+        {
+          "silhouette": 0.25472754895857297,
+          "calinski_harabasz": 118.52612636302989,
+          "davies_bouldin": 1.3765528135100342,
+          "inertia": 4981.5007987424815,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 4,
+          "n_points_scored": 8790,
+          "k": 4
+        },
+        {
+          "silhouette": 0.26258180836515826,
+          "calinski_harabasz": 127.44780117572665,
+          "davies_bouldin": 1.6906830960109296,
+          "inertia": 4898.82945051508,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 5,
+          "n_points_scored": 8790,
+          "k": 5
+        },
+        {
+          "silhouette": 0.2610426001132024,
+          "calinski_harabasz": 100.1249485938528,
+          "davies_bouldin": 1.3199899733694298,
+          "inertia": 4903.635315713552,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 6,
+          "n_points_scored": 8790,
+          "k": 6
+        },
+        {
+          "silhouette": 0.2670112671922255,
+          "calinski_harabasz": 104.2292959707908,
+          "davies_bouldin": 1.2846727630651957,
+          "inertia": 4838.585507238165,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 7,
+          "n_points_scored": 8790,
+          "k": 7
+        },
+        {
+          "silhouette": 0.26897610434280017,
+          "calinski_harabasz": 105.28695249954532,
+          "davies_bouldin": 1.3338091570684196,
+          "inertia": 4781.805454570405,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 8,
+          "n_points_scored": 8790,
+          "k": 8
+        },
+        {
+          "silhouette": 0.2718665267845859,
+          "calinski_harabasz": 99.4211928451111,
+          "davies_bouldin": 1.2862602920114696,
+          "inertia": 4752.621988729283,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 9,
+          "n_points_scored": 8790,
+          "k": 9
+        },
+        {
+          "silhouette": 0.2743849133391506,
+          "calinski_harabasz": 99.33974136836527,
+          "davies_bouldin": 1.3633423082098188,
+          "inertia": 4704.094486033498,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 10,
+          "n_points_scored": 8790,
+          "k": 10
+        },
+        {
+          "silhouette": 0.2777350061884027,
+          "calinski_harabasz": 94.81015519736995,
+          "davies_bouldin": 2.3924518542644546,
+          "inertia": 4677.909241880993,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 11,
+          "n_points_scored": 8790,
+          "k": 11
+        },
+        {
+          "silhouette": 0.2807409843966227,
+          "calinski_harabasz": 94.46119543498435,
+          "davies_bouldin": 1.3772760362577872,
+          "inertia": 4634.509129686507,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 12,
+          "n_points_scored": 8790,
+          "k": 12
+        },
+        {
+          "silhouette": 0.28379614774526823,
+          "calinski_harabasz": 88.45364924103667,
+          "davies_bouldin": 1.2295082460478883,
+          "inertia": 4623.915428004358,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 13,
+          "n_points_scored": 8790,
+          "k": 13
+        },
+        {
+          "silhouette": 0.28202693747596347,
+          "calinski_harabasz": 88.85161467689518,
+          "davies_bouldin": 1.9336418838653031,
+          "inertia": 4580.266213703041,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 14,
+          "n_points_scored": 8790,
+          "k": 14
+        },
+        {
+          "silhouette": 0.28890157529156446,
+          "calinski_harabasz": 87.7836130887622,
+          "davies_bouldin": 1.1740463848310438,
+          "inertia": 4546.371407170519,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 15,
+          "n_points_scored": 8790,
+          "k": 15
+        },
+        {
+          "silhouette": 0.29595068789948853,
+          "calinski_harabasz": 92.20153485868708,
+          "davies_bouldin": 2.0108936860303497,
+          "inertia": 4477.353512753657,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 16,
+          "n_points_scored": 8790,
+          "k": 16
+        },
+        {
+          "silhouette": 0.289558185804332,
+          "calinski_harabasz": 81.93963868319345,
+          "davies_bouldin": 1.9890441279811426,
+          "inertia": 4509.246856584007,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 17,
+          "n_points_scored": 8790,
+          "k": 17
+        },
+        {
+          "silhouette": 0.2993736344115381,
+          "calinski_harabasz": 88.580561921471,
+          "davies_bouldin": 1.914395686743326,
+          "inertia": 4423.700482206645,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 18,
+          "n_points_scored": 8790,
+          "k": 18
+        },
+        {
+          "silhouette": 0.29579630053065825,
+          "calinski_harabasz": 83.84537126074314,
+          "davies_bouldin": 1.3807566724321816,
+          "inertia": 4422.186301335194,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 19,
+          "n_points_scored": 8790,
+          "k": 19
+        },
+        {
+          "silhouette": 0.2980183353004506,
+          "calinski_harabasz": 80.32004889196399,
+          "davies_bouldin": 1.9936970819154944,
+          "inertia": 4414.86917162346,
+          "noise_fraction": 0.0,
+          "n_clusters_found": 20,
+          "n_points_scored": 8790,
+          "k": 20
+        }
+      ],
+      "candidate_k": 5,
+      "knee": 5,
+      "stability": {
+        "k": 5,
+        "n_bootstrap": 20,
+        "n_pairs": 190,
+        "fraction": 0.8,
+        "mean_ari": 0.518131219524847,
+        "std_ari": 0.1346504748201445
+      },
+      "external": {
+        "type": {
+          "ari": -0.01055887477015154,
+          "nmi": 0.007616211066936939,
+          "n": 8790
+        },
+        "rating": {
+          "ari": 0.006157846132354914,
+          "nmi": 0.009373983751030225,
+          "n": 8790
+        },
+        "primary_genre": {
+          "ari": -0.001105192605782408,
+          "nmi": 0.017960473471889775,
+          "n": 8790
+        }
+      },
+      "seconds": 182.7765829002019,
+      "cumulative_explained_variance": 0.45857202948536724,
+      "svd_components": 150,
+      "at_shared_k": {
+        "silhouette": 0.2718665267845859,
+        "calinski_harabasz": 99.4211928451111,
+        "davies_bouldin": 1.2862602920114696,
+        "inertia": 4752.621988729283,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 9,
+        "n_points_scored": 8790,
+        "k": 9
+      },
+      "at_candidate": {
+        "silhouette": 0.26258180836515826,
+        "calinski_harabasz": 127.44780117572665,
+        "davies_bouldin": 1.6906830960109296,
+        "inertia": 4898.82945051508,
+        "noise_fraction": 0.0,
+        "n_clusters_found": 5,
+        "n_points_scored": 8790,
+        "k": 5
+      }
+    }
+  },
+  "weight_sensitivity": [
+    {
+      "weights": {
+        "text": 1.0,
+        "genre": 1.0,
+        "categorical": 0.5,
+        "numeric": 0.5
+      },
+      "k": 9,
+      "silhouette": 0.0796228163542432,
+      "calinski_harabasz": 420.1984032890764,
+      "davies_bouldin": 3.1170881435148856,
+      "bootstrap_ari": 0.7437146416443565,
+      "bootstrap_ari_std": 0.09204847027804217,
+      "n_bootstrap": 10
+    },
+    {
+      "weights": {
+        "text": 0.5,
+        "genre": 1.5,
+        "categorical": 0.5,
+        "numeric": 0.5
+      },
+      "k": 9,
+      "silhouette": 0.11724032250690848,
+      "calinski_harabasz": 567.7650571591886,
+      "davies_bouldin": 2.550341896117636,
+      "bootstrap_ari": 0.7058597692862515,
+      "bootstrap_ari_std": 0.07699028088861927,
+      "n_bootstrap": 10
+    },
+    {
+      "weights": {
+        "text": 2.0,
+        "genre": 1.0,
+        "categorical": 0.25,
+        "numeric": 0.25
+      },
+      "k": 9,
+      "silhouette": 0.06280099864509038,
+      "calinski_harabasz": 297.02193856520876,
+      "davies_bouldin": 3.6073169122695248,
+      "bootstrap_ari": 0.7121109414055066,
+      "bootstrap_ari_std": 0.06792430770695573,
+      "n_bootstrap": 10
+    }
+  ],
+  "gower": {
+    "subsample": 3000,
+    "k": 9,
+    "note": "Gower distances were computed in float32 blocks on a subsample. This comparison is not the product model and cannot assign the held-out rows.",
+    "silhouette": 0.11275794357061386,
+    "calinski_harabasz": NaN,
+    "davies_bouldin": NaN,
+    "full_catalogue_float64_gb": 0.6181128
+  },
+  "kprototypes": {
+    "available": true,
+    "subsample": 2000,
+    "k": 9,
+    "cost": 12429.898560839782,
+    "ari_vs_primary_genre": 0.04140280951857534,
+    "note": "KPrototypes on a 2,000-row subsample of type, country, rating, primary genre and a few numerics. It is a mixed-type alternative to one-hot Euclidean distance, not the product model."
+  }
+}
