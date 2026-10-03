@@ -1,0 +1,663 @@
+{
+  "representation": "r1",
+  "chosen_k": 6,
+  "reason": "Chosen k=6 as the finest k in 5..10 whose mean bootstrap ARI is at least 0.80. Bootstrap ARI is 0.8203 \u00b1 0.1211. Stability outranks a flattering silhouette: a compact cluster that moves under resampling is noise. k below 5 is not allowed to set the ceiling, because an ARI near 1.0 there is the stability of a coarse partition rather than a content segmentation. Criteria that disagreed: maximum bootstrap ARI at k=2 (0.9996), a coarser cut excluded from the ceiling; highest ARI inside 5..10 at k=5 (0.9075); inertia knee at k=9; max silhouette at k=2 (0.1733); max Calinski-Harabasz at k=2; best (lowest) Davies-Bouldin at k=19.",
+  "scores": [
+    {
+      "silhouette": 0.17332153590125562,
+      "calinski_harabasz": 1664.1333325256783,
+      "davies_bouldin": 2.0831493293030903,
+      "inertia": 6100.806179911803,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 2,
+      "n_points_scored": 8790,
+      "k": 2
+    },
+    {
+      "silhouette": 0.14666530440757458,
+      "calinski_harabasz": 1373.5461109487874,
+      "davies_bouldin": 2.364618436607046,
+      "inertia": 5527.889175908438,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 3,
+      "n_points_scored": 8790,
+      "k": 3
+    },
+    {
+      "silhouette": 0.14452807524385575,
+      "calinski_harabasz": 1103.049372325612,
+      "davies_bouldin": 2.485480373503049,
+      "inertia": 5270.867859559099,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 4,
+      "n_points_scored": 8790,
+      "k": 4
+    },
+    {
+      "silhouette": 0.1310468745101344,
+      "calinski_harabasz": 971.6737857392752,
+      "davies_bouldin": 2.5928460507868047,
+      "inertia": 5030.47703296681,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 5,
+      "n_points_scored": 8790,
+      "k": 5
+    },
+    {
+      "silhouette": 0.12823954344920235,
+      "calinski_harabasz": 872.8254423973567,
+      "davies_bouldin": 2.5170819104272493,
+      "inertia": 4847.642122470339,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 6,
+      "n_points_scored": 8790,
+      "k": 6
+    },
+    {
+      "silhouette": 0.1274638866671529,
+      "calinski_harabasz": 820.4498011140398,
+      "davies_bouldin": 2.383073436975671,
+      "inertia": 4649.902213841674,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 7,
+      "n_points_scored": 8790,
+      "k": 7
+    },
+    {
+      "silhouette": 0.148105804331266,
+      "calinski_harabasz": 764.8684233152111,
+      "davies_bouldin": 2.176258342576,
+      "inertia": 4507.820259658242,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 8,
+      "n_points_scored": 8790,
+      "k": 8
+    },
+    {
+      "silhouette": 0.14508859489351758,
+      "calinski_harabasz": 742.1666007621931,
+      "davies_bouldin": 2.2431399580409916,
+      "inertia": 4328.998936285601,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 9,
+      "n_points_scored": 8790,
+      "k": 9
+    },
+    {
+      "silhouette": 0.13688340136082058,
+      "calinski_harabasz": 696.0964034887973,
+      "davies_bouldin": 2.2852691570438592,
+      "inertia": 4234.559754288204,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 10,
+      "n_points_scored": 8790,
+      "k": 10
+    },
+    {
+      "silhouette": 0.14689752970435524,
+      "calinski_harabasz": 673.9180113371335,
+      "davies_bouldin": 2.273718119921472,
+      "inertia": 4104.935916077581,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 11,
+      "n_points_scored": 8790,
+      "k": 11
+    },
+    {
+      "silhouette": 0.15633676444508893,
+      "calinski_harabasz": 643.3738495350542,
+      "davies_bouldin": 2.1704161466750986,
+      "inertia": 4017.245506248817,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 12,
+      "n_points_scored": 8790,
+      "k": 12
+    },
+    {
+      "silhouette": 0.16178222344598023,
+      "calinski_harabasz": 628.5098678176482,
+      "davies_bouldin": 2.1796909460097393,
+      "inertia": 3902.577401710827,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 13,
+      "n_points_scored": 8790,
+      "k": 13
+    },
+    {
+      "silhouette": 0.15708508040315555,
+      "calinski_harabasz": 608.2313432437057,
+      "davies_bouldin": 2.032115057326255,
+      "inertia": 3817.019611182937,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 14,
+      "n_points_scored": 8790,
+      "k": 14
+    },
+    {
+      "silhouette": 0.13528710833242816,
+      "calinski_harabasz": 580.3211882392243,
+      "davies_bouldin": 2.22989077777963,
+      "inertia": 3767.6927277493787,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 15,
+      "n_points_scored": 8790,
+      "k": 15
+    },
+    {
+      "silhouette": 0.1391154562356573,
+      "calinski_harabasz": 565.4169679767613,
+      "davies_bouldin": 2.1606499293232586,
+      "inertia": 3689.5923164823134,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 16,
+      "n_points_scored": 8790,
+      "k": 16
+    },
+    {
+      "silhouette": 0.16002819162721357,
+      "calinski_harabasz": 546.5921344822955,
+      "davies_bouldin": 2.069397414648668,
+      "inertia": 3633.741036027225,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 17,
+      "n_points_scored": 8790,
+      "k": 17
+    },
+    {
+      "silhouette": 0.15148318938956165,
+      "calinski_harabasz": 537.3903927840371,
+      "davies_bouldin": 2.0368887671328917,
+      "inertia": 3554.368646158695,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 18,
+      "n_points_scored": 8790,
+      "k": 18
+    },
+    {
+      "silhouette": 0.1565718335021351,
+      "calinski_harabasz": 523.8566942567534,
+      "davies_bouldin": 2.012394420756921,
+      "inertia": 3496.7920803552133,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 19,
+      "n_points_scored": 8790,
+      "k": 19
+    },
+    {
+      "silhouette": 0.1535355730279033,
+      "calinski_harabasz": 504.32739696451375,
+      "davies_bouldin": 2.0443375660170275,
+      "inertia": 3467.473051774855,
+      "noise_fraction": 0.0,
+      "n_clusters_found": 20,
+      "n_points_scored": 8790,
+      "k": 20
+    }
+  ],
+  "stability": [
+    {
+      "k": 2,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.9995931895455026,
+      "std_ari": 0.00045896705087311796
+    },
+    {
+      "k": 3,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.9967891794728477,
+      "std_ari": 0.001900667842449421
+    },
+    {
+      "k": 4,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.9901053589321467,
+      "std_ari": 0.007627708175405776
+    },
+    {
+      "k": 5,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.9074593973854751,
+      "std_ari": 0.13456231645645036
+    },
+    {
+      "k": 6,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.8202726543677922,
+      "std_ari": 0.1211317682451567
+    },
+    {
+      "k": 7,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7629524587963066,
+      "std_ari": 0.11581993898787918
+    },
+    {
+      "k": 8,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7273578767677871,
+      "std_ari": 0.10605814848230131
+    },
+    {
+      "k": 9,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7247719721926238,
+      "std_ari": 0.09802681062238412
+    },
+    {
+      "k": 10,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7268054041143438,
+      "std_ari": 0.08483671619536338
+    },
+    {
+      "k": 11,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7251704900040324,
+      "std_ari": 0.08596571791533134
+    },
+    {
+      "k": 12,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7087517726443636,
+      "std_ari": 0.08243425083937944
+    },
+    {
+      "k": 13,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7183025732141465,
+      "std_ari": 0.07522588049140642
+    },
+    {
+      "k": 14,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.6979471116850292,
+      "std_ari": 0.07475510980580896
+    },
+    {
+      "k": 15,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.6997803065265639,
+      "std_ari": 0.0818146834673984
+    },
+    {
+      "k": 16,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.7130945880608034,
+      "std_ari": 0.07257423042111809
+    },
+    {
+      "k": 17,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.6936370665718524,
+      "std_ari": 0.07447380527850055
+    },
+    {
+      "k": 18,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.6656085739809293,
+      "std_ari": 0.06974837130771995
+    },
+    {
+      "k": 19,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.6882085217258092,
+      "std_ari": 0.06368458995227139
+    },
+    {
+      "k": 20,
+      "n_bootstrap": 20,
+      "n_pairs": 190,
+      "fraction": 0.8,
+      "mean_ari": 0.690970087708953,
+      "std_ari": 0.06271668275782037
+    }
+  ],
+  "gmm": [
+    {
+      "k": 2,
+      "bic": -4907873.799884621,
+      "aic": -4910911.707610622,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 3,
+      "bic": -5659543.7203985555,
+      "aic": -5664104.122672553,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 4,
+      "bic": -5896489.447027259,
+      "aic": -5902572.343849252,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 5,
+      "bic": -6137439.527348882,
+      "aic": -6145044.918718871,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 6,
+      "bic": -6545262.73017561,
+      "aic": -6554390.6160935955,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 7,
+      "bic": -6629818.238551314,
+      "aic": -6640468.619017296,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 8,
+      "bic": -6357271.634997018,
+      "aic": -6369444.510010995,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 9,
+      "bic": -6484100.084497101,
+      "aic": -6497795.454059075,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 10,
+      "bic": -6621313.981065073,
+      "aic": -6636531.845175043,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 11,
+      "bic": -6855294.015857591,
+      "aic": -6872034.374515557,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 12,
+      "bic": -7101402.681955973,
+      "aic": -7119665.535161935,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 13,
+      "bic": -7199578.442205,
+      "aic": -7219363.789958958,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 14,
+      "bic": -7340595.872684498,
+      "aic": -7361903.714986452,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 15,
+      "bic": -7386844.105402621,
+      "aic": -7409674.442252572,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 16,
+      "bic": -7427919.5732171545,
+      "aic": -7452272.4046151005,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 17,
+      "bic": -7544935.571262011,
+      "aic": -7570810.897207953,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 18,
+      "bic": -7617919.053366887,
+      "aic": -7645316.873860825,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 19,
+      "bic": -7645361.894555437,
+      "aic": -7674282.2095973715,
+      "covariance_type": "diag"
+    },
+    {
+      "k": 20,
+      "bic": -7694559.163963786,
+      "aic": -7725001.973553716,
+      "covariance_type": "diag"
+    }
+  ],
+  "gap": [
+    {
+      "k": 2,
+      "gap": -0.9731475581161142,
+      "observed_inertia": 6100.806179911803,
+      "reference_log_inertia_mean": 7.743028643954119,
+      "n_references": 5
+    },
+    {
+      "k": 3,
+      "gap": -0.8913933991184138,
+      "observed_inertia": 5527.889175908438,
+      "reference_log_inertia_mean": 7.726167918354696,
+      "n_references": 5
+    },
+    {
+      "k": 4,
+      "gap": -0.8569416191973191,
+      "observed_inertia": 5270.867859559099,
+      "reference_log_inertia_mean": 7.713008688013178,
+      "n_references": 5
+    },
+    {
+      "k": 5,
+      "gap": -0.8216483912870949,
+      "observed_inertia": 5030.47703296681,
+      "reference_log_inertia_mean": 7.701621704877846,
+      "n_references": 5
+    },
+    {
+      "k": 6,
+      "gap": -0.7915945333682917,
+      "observed_inertia": 4847.642122470339,
+      "reference_log_inertia_mean": 7.694653172033602,
+      "n_references": 5
+    },
+    {
+      "k": 7,
+      "gap": -0.7567386355827956,
+      "observed_inertia": 4649.902213841674,
+      "reference_log_inertia_mean": 7.687862833496128,
+      "n_references": 5
+    },
+    {
+      "k": 8,
+      "gap": -0.732920439262088,
+      "observed_inertia": 4507.820259658242,
+      "reference_log_inertia_mean": 7.680648563687042,
+      "n_references": 5
+    },
+    {
+      "k": 9,
+      "gap": -0.6968750240603301,
+      "observed_inertia": 4328.998936285601,
+      "reference_log_inertia_mean": 7.676216577663349,
+      "n_references": 5
+    },
+    {
+      "k": 10,
+      "gap": -0.680222952171869,
+      "observed_inertia": 4234.559754288204,
+      "reference_log_inertia_mean": 7.670811695387471,
+      "n_references": 5
+    },
+    {
+      "k": 11,
+      "gap": -0.6522035173239109,
+      "observed_inertia": 4104.935916077581,
+      "reference_log_inertia_mean": 7.667741893253814,
+      "n_references": 5
+    },
+    {
+      "k": 12,
+      "gap": -0.6346353088306822,
+      "observed_inertia": 4017.245506248817,
+      "reference_log_inertia_mean": 7.66371644047678,
+      "n_references": 5
+    },
+    {
+      "k": 13,
+      "gap": -0.6090767405833581,
+      "observed_inertia": 3902.577401710827,
+      "reference_log_inertia_mean": 7.660315745488035,
+      "n_references": 5
+    },
+    {
+      "k": 14,
+      "gap": -0.59105701028205,
+      "observed_inertia": 3817.019611182937,
+      "reference_log_inertia_mean": 7.656168180302467,
+      "n_references": 5
+    },
+    {
+      "k": 15,
+      "gap": -0.5815071034077031,
+      "observed_inertia": 3767.6927277493787,
+      "reference_log_inertia_mean": 7.652710981126131,
+      "n_references": 5
+    },
+    {
+      "k": 16,
+      "gap": -0.5645458626875532,
+      "observed_inertia": 3689.5923164823134,
+      "reference_log_inertia_mean": 7.64872538490516,
+      "n_references": 5
+    },
+    {
+      "k": 17,
+      "gap": -0.550212061608665,
+      "observed_inertia": 3633.741036027225,
+      "reference_log_inertia_mean": 7.647805923395806,
+      "n_references": 5
+    },
+    {
+      "k": 18,
+      "gap": -0.5300483166750372,
+      "observed_inertia": 3554.368646158695,
+      "reference_log_inertia_mean": 7.64588441377302,
+      "n_references": 5
+    },
+    {
+      "k": 19,
+      "gap": -0.5157178530178372,
+      "observed_inertia": 3496.7920803552133,
+      "reference_log_inertia_mean": 7.643883425702351,
+      "n_references": 5
+    },
+    {
+      "k": 20,
+      "gap": -0.5089775083924,
+      "observed_inertia": 3467.473051774855,
+      "reference_log_inertia_mean": 7.642203872108091,
+      "n_references": 5
+    }
+  ],
+  "seed_stability": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mean_pairwise_ari": 0.8082048117790611,
+    "std_pairwise_ari": 0.1163379930413996,
+    "mean_ari_vs_first_seed": 0.8304380363555214
+  },
+  "external": {
+    "type": {
+      "ari": 0.26320706871732297,
+      "nmi": 0.4270999864555926,
+      "n": 8790
+    },
+    "rating": {
+      "ari": 0.06645757630441528,
+      "nmi": 0.11652511084543829,
+      "n": 8790
+    },
+    "primary_genre": {
+      "ari": 0.19625323699653616,
+      "nmi": 0.3473715789731189,
+      "n": 8790
+    }
+  },
+  "ari_vs_type": [
+    {
+      "k": 2,
+      "ari_vs_type": 0.9953407585015374
+    },
+    {
+      "k": 3,
+      "ari_vs_type": 0.5354761358987211
+    },
+    {
+      "k": 4,
+      "ari_vs_type": 0.4075009046576039
+    },
+    {
+      "k": 6,
+      "ari_vs_type": 0.28413267770705475
+    }
+  ],
+  "mean_silhouette_chosen": 0.12823954344920235,
+  "per_cluster_silhouette": {
+    "0": 0.048331448809388645,
+    "1": 0.1399042653821738,
+    "2": 0.18260658763258444,
+    "3": 0.1533672810284921,
+    "4": 0.09390320176861326,
+    "5": 0.15686438193273763
+  }
+}
