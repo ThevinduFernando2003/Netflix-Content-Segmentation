@@ -65,7 +65,9 @@ def main() -> None:
         page = context.new_page()
         page.goto(UI, wait_until="domcontentloaded", timeout=60_000)
         page.get_by_text("Netflix content segments").first.wait_for(timeout=60_000)
-        page.get_by_text("Projection distances are not interpretable").first.wait_for(timeout=60_000)
+        page.get_by_text("Projection distances are not interpretable").first.wait_for(
+            timeout=60_000
+        )
         page.locator(".js-plotly-plot").first.wait_for(timeout=60_000)
         page.wait_for_timeout(2500)
         _shot(page, "01_segment_map.png")
